@@ -1,5 +1,6 @@
 import React from "react"
 import Clips from "./utils/Clips"
+import SocialLink from "./utils/SocialLink"
 
 const Hero = ({
   heroapi: { title, subtitle, img, btntext, videos, sociallinks },
@@ -27,10 +28,16 @@ const Hero = ({
                 <Clips key={i} imgsrc={val.imgsrc} clip={val.clip} />
               ))}
             </div>
-            <div></div>
+            <div className="grid items-center gap-3 absolute top-[33vh] lg:top-[27vh] right-[0] w-auto h-auto">
+              {sociallinks?.map((val, i) => (
+                <SocialLink key={i} icon={val.icon} link={val.link} />
+              ))}
+            </div>
           </div>
           <div className="translate-y-5">
             <img
+              width="100%"
+              height="515px"
               src={img}
               alt="hero-img/img"
               className="w-auto h-[45vh] lg:h-[35vh] md:h-[31vh] sm:h-[21vh] xsm:h-[19vh] transitions-theme -rotate-[25deg] hover:rotate-0 select-none cursor-auto object-fill"
