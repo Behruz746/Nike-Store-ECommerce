@@ -3,6 +3,37 @@
 @tailwind components;
 @tailwind utilities;
 
+.heart-container {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  transform: rotate(-45deg);
+  animation-name: beat;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @layer base {
   * {
     margin: 0;
@@ -49,6 +80,10 @@
   /* Clip-path */
   .clip-path {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65%);
+  }
+
+  .hover-theme:hover img {
+    transform: rotate(-12deg);
   }
 
   /* Blur-Effect */

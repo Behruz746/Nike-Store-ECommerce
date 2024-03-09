@@ -30,6 +30,7 @@ import instagram from "../assets/instagram.svg"
 import twitter from "../assets/twitter.svg"
 import youtube from "../assets/youtube.svg"
 import messenger from "../assets/messenger.svg"
+import arrow from "../assets/right-arrow.svg"
 
 const heroapi = {
   title: "Play With Electric Nike",
@@ -42,11 +43,26 @@ const heroapi = {
     { imgsrc: vcover3, clip: clip },
   ],
   sociallinks: [
-    { icon: facebook },
-    { icon: messenger },
-    { icon: instagram },
-    { icon: twitter },
-    { icon: youtube },
+    {
+      link: "/",
+      icon: facebook,
+    },
+    {
+      link: "/",
+      icon: messenger,
+    },
+    {
+      link: "/",
+      icon: instagram,
+    },
+    {
+      link: "/",
+      icon: twitter,
+    },
+    {
+      link: "/",
+      icon: youtube,
+    },
   ],
 }
 
@@ -247,6 +263,7 @@ const toprateslaes = {
 
 const story = {
   title: "Top Stories",
+  icon: arrow,
   news: [
     {
       title: "Jayson Tatum Debuts",
