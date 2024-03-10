@@ -17,7 +17,7 @@ function CartEmpty({ onCartToggle }) {
           onClick={onCartToggle}
         >
           <ArrowLeftIcon className="w-5 h-5 text-slate-900" />
-          <span className="">Back To Nike Store</span>
+          <span>Back To Nike Store</span>
         </button>
       </div>
     </>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { selectTotalQTY } from "../app/CartSlice.js"
 import {
   HeartIcon,
   MagnifyingGlassIcon,
@@ -10,6 +11,7 @@ import { setOpenCart } from "../app/CartSlice"
 
 function Navbar() {
   const [navState, setNavState] = useState(false)
+  const totalQTY = useSelector(selectTotalQTY)
   const dispatch = useDispatch()
 
   const onCartToggle = () => {
@@ -76,7 +78,7 @@ function Navbar() {
                       : "bg-slate-100 text-slate-900 shadow-slate-100"
                   }`}
                 >
-                  0
+                  {totalQTY}
                 </div>
               </button>
             </li>
